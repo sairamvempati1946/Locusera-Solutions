@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers - LOCUSERA SOLUTIONS</title>
+  <link rel="icon" type="image/jpeg" href="./favicon.png"/>
+  <meta name="description"
+    content="Browse open roles at LOCUSERA SOLUTIONS across IT, Pharma, and Digital Marketing. Apply instantly via WhatsApp." />
+  <meta name="theme-color" content="#0B1B3D" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       1. DESIGN TOKENS
+       ============================================================ */
+    :root {
+      --navy-deep: #0B1B3D;
+      --navy-midnight: #0F2557;
+      --navy-node: #1E3A8A;
+      --blue-electric: #1D6FE0;
+      --blue-light: #4DA3F5;
+      --orange-vivid: #FF7A00;
+      --orange-warm: #F5A524;
+      --orange-glow: #FFB347;
+      --white: #FFFFFF;
+      --bg-soft: #F5F8FE;
+      --bg-tint: #EAF1FC;
+      --border: #E1E8F4;
+      --ink: #0B1B3D;
+      --ink-muted: #4E5C78;
+      --wa-green: #25D366;
+      --wa-green-dark: #128C7E;
+      --danger: #E74C3C;
+
+      --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 16px;
+      --space-4: 24px;
+      --space-5: 32px;
+      --space-6: 48px;
+      --space-7: 64px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-pill: 999px;
+      --shadow-sm: 0 2px 6px rgba(11, 27, 61, .08);
+      --shadow-md: 0 8px 24px rgba(11, 27, 61, .12);
+      --shadow-lg: 0 20px 48px rgba(11, 27, 61, .18);
+      --container: 1200px;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+    }
+
+    /* ============================================================
+       2. RESET & BASE
+       ============================================================ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1.2;
+    }
+
+    ::selection {
+      background: var(--orange-vivid);
+      color: #fff;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--container));
+      margin-inline: auto;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 8px;
+      background: #fff;
+      color: var(--navy-deep);
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      z-index: 100;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: var(--shadow-md);
+      transition: top .2s var(--ease);
+    }
+
+    .skip-link:focus {
+      top: 8px;
+    }
+
+    /* ============================================================
+       3. BUTTONS
+       ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      padding: 12px 22px;
+      border-radius: var(--radius-md);
+      background: var(--orange-vivid);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(255, 122, 0, .35);
+      background: #E66A00;
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid rgba(255, 122, 0, .35);
+      outline-offset: 2px;
+    }
+
+    .btn--primary {
+      background: var(--orange-vivid);
+    }
+
+    .btn--blue {
+      background: var(--blue-electric);
+    }
+
+    .btn--blue:hover {
+      background: #155DBE;
+      box-shadow: 0 8px 20px rgba(29, 111, 224, .35);
+    }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--orange-vivid);
+      border-color: var(--orange-vivid);
+    }
+
+    .btn--ghost:hover {
+      background: rgba(255, 122, 0, .08);
+      color: var(--orange-vivid);
+      box-shadow: none;
+      transform: translateY(-1px);
+    }
+
+    .btn--light {
+      background: #fff;
+      color: var(--navy-deep);
+    }
+
+    .btn--light:hover {
+      background: var(--bg-tint);
+      color: var(--navy-deep);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn--lg {
+      padding: 14px 26px;
+      font-size: 15px;
+    }
+
+    .btn--full {
+      width: 100%;
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ============================================================
+       4. HEADER / NAV
+       ============================================================ */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: saturate(180%) blur(10px);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding: 10px 0;
+      position: relative;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--navy-deep);
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .brand__logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(11, 27, 61, .12);
+      border: 1px solid var(--border);
+    }
+
+    .brand__name {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      font-size: 16px;
+    }
+
+    .brand__sub {
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: var(--blue-electric);
+      margin-top: 4px;
+      font-weight: 700;
+    }
+
+    .brand--light {
+      color: #fff;
+    }
+
+    .brand--light .brand__sub {
+      color: var(--orange-warm);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav__list {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: var(--navy-deep);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      transition: background .2s var(--ease), color .2s var(--ease);
+    }
+
+    .nav__link:hover {
+      background: var(--bg-tint);
+      color: var(--orange-vivid);
+    }
+
+    .nav__link--active {
+      color: var(--orange-vivid);
+      position: relative;
+    }
+
+    .nav__link--active::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 4px;
+      height: 2px;
+      background: var(--orange-vivid);
+      border-radius: 2px;
+    }
+
+    .nav__chevron {
+      width: 14px;
+      height: 14px;
+      transition: transform .2s var(--ease);
+    }
+
+    .nav__link--button[aria-expanded="true"] .nav__chevron {
+      transform: rotate(180deg);
+    }
+
+    .nav__item--has-menu {
+      position: relative;
+    }
+
+    .nav__dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      min-width: 240px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      padding: 6px;
+      list-style: none;
+      margin: 0;
+      display: none;
+      z-index: 60;
+    }
+
+    .nav__dropdown.is-open {
+      display: block;
+      animation: dropdownIn .18s var(--ease);
+    }
+
+    @keyframes dropdownIn {
+      from {
+        opacity: 0;
+        transform: translateY(-4px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .nav__dropdown a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      color: var(--navy-deep);
+      text-decoration: none;
+      font-size: 14px;
+      transition: background .15s var(--ease), color .15s var(--ease);
+    }
+
+    .nav__dropdown a:hover {
+      background: var(--bg-tint);
+      color: var(--orange-vivid);
+    }
+
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: 0;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .nav__toggle:hover {
+      background: var(--bg-tint);
+    }
+
+    .nav__toggle-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--navy-deep);
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: transform .25s var(--ease), opacity .2s var(--ease);
+    }
+
+    .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* ============================================================
+       5. PAGE HEADER
+       ============================================================ */
+    .page-header {
+      position: relative;
+      padding: 80px 0 64px;
+      background: linear-gradient(135deg, #081430 0%, #0B1B3D 45%, #0F2557 100%);
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 20% 80%, rgba(255, 179, 71, .15) 0 2px, transparent 3px), radial-gradient(circle at 80% 20%, rgba(77, 163, 245, .18) 0 2px, transparent 3px);
+      background-size: 220px 220px, 260px 260px;
+      pointer-events: none;
+      opacity: .8;
+    }
+
+    .page-header__content {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .page-header__title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      margin: 0 0 16px;
+      letter-spacing: -.5px;
+    }
+
+    .page-header__lede {
+      font-size: 17px;
+      color: #C5D1E8;
+      margin: 0;
+    }
+
+    /* ============================================================
+       6. FILTER BAR
+       ============================================================ */
+    .filter-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: var(--space-4) 0;
+      position: sticky;
+      top: 69px;
+      z-index: 40;
+      box-shadow: 0 4px 12px rgba(11, 27, 61, .04);
+    }
+
+    .filter-bar__inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 250px;
+      position: relative;
+    }
+
+    .search-box svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: var(--ink-muted);
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 12px 16px 12px 42px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--ink);
+      background: var(--bg-soft);
+      transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--blue-electric);
+      box-shadow: 0 0 0 3px rgba(29, 111, 224, .15);
+      background: #fff;
+    }
+
+    .filter-selects {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+
+    .filter-select {
+      padding: 12px 36px 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--ink);
+      background: var(--bg-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234E5C78' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right 12px center;
+      appearance: none;
+      cursor: pointer;
+      transition: border-color .2s var(--ease);
+    }
+
+    .filter-select:focus {
+      outline: none;
+      border-color: var(--blue-electric);
+    }
+
+    /* ============================================================
+       7. JOBS SECTION
+       ============================================================ */
+    .jobs-section {
+      padding: var(--space-7) 0;
+      background: var(--bg-soft);
+      min-height: 500px;
+    }
+
+    .jobs-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      margin-bottom: var(--space-5);
+    }
+
+    .job-card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
+    }
+
+    .job-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 24px;
+      width: 48px;
+      height: 3px;
+      background: var(--orange-vivid);
+      border-radius: 0 0 3px 3px;
+    }
+
+    .job-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--orange-glow);
+    }
+
+    .job-card__type {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      color: var(--blue-electric);
+      margin-bottom: 12px;
+      margin-top: 4px;
+    }
+
+    .job-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .job-card__meta {
+      margin: 0 0 var(--space-3);
+      color: var(--ink-muted);
+      font-size: 13px;
+    }
+
+    .job-card .btn {
+      margin-top: auto;
+      align-self: flex-start;
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: var(--space-7) 0;
+      color: var(--ink-muted);
+      grid-column: 1 / -1;
+    }
+
+    .no-results svg {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto var(--space-3);
+      color: var(--border);
+    }
+
+    /* Pagination Styles */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: var(--space-5);
+    }
+
+    .page-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      height: 40px;
+      padding: 0 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--navy-deep);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all .2s var(--ease);
+    }
+
+    .page-item:hover {
+      background: var(--bg-tint);
+      border-color: var(--blue-light);
+      color: var(--blue-electric);
+    }
+
+    .page-item.active {
+      background: var(--orange-vivid);
+      border-color: var(--orange-vivid);
+      color: #fff;
+    }
+
+    .page-item.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* ============================================================
+       8. MODAL (APPLICATION FORM)
+       ============================================================ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 27, 61, .6);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-3);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s var(--ease);
+    }
+
+    .modal-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal {
+      background: #fff;
+      width: 100%;
+      max-width: 520px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: translateY(20px);
+      transition: transform .25s var(--ease);
+    }
+
+    .modal-overlay.is-open .modal {
+      transform: translateY(0);
+    }
+
+    .modal__header {
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-3);
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 10;
+    }
+
+    .modal__title {
+      font-size: 20px;
+      font-weight: 800;
+      margin: 0;
+      color: var(--navy-deep);
+    }
+
+    .modal__subtitle {
+      font-size: 14px;
+      color: var(--ink-muted);
+      margin: 4px 0 0;
+    }
+
+    .modal__close {
+      background: var(--bg-soft);
+      border: 0;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      color: var(--ink-muted);
+      transition: background .2s var(--ease), color .2s var(--ease);
+      flex-shrink: 0;
+    }
+
+    .modal__close:hover {
+      background: #FCE8E6;
+      color: var(--danger);
+    }
+
+    .modal__body {
+      padding: var(--space-5);
+    }
+
+    .form-group {
+      margin-bottom: var(--space-4);
+    }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 6px;
+    }
+
+    .form-label span {
+      color: var(--danger);
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--ink);
+      background: var(--bg-soft);
+      transition: border-color .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease);
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--blue-electric);
+      box-shadow: 0 0 0 3px rgba(29, 111, 224, .15);
+      background: #fff;
+    }
+
+    .form-input.is-invalid,
+    .form-textarea.is-invalid {
+      border-color: var(--danger);
+      box-shadow: 0 0 0 3px rgba(231, 76, 60, .15);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-hint {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin: 6px 0 0;
+    }
+
+    .form-error {
+      font-size: 12px;
+      color: var(--danger);
+      margin: 6px 0 0;
+      display: none;
+    }
+
+    .form-error.is-visible {
+      display: block;
+    }
+
+    .modal__footer {
+      padding: var(--space-4) var(--space-5);
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: var(--space-3);
+      justify-content: flex-end;
+      position: sticky;
+      bottom: 0;
+      background: #fff;
+    }
+
+    .btn--wa {
+      background: var(--wa-green);
+    }
+
+    .btn--wa:hover {
+      background: var(--wa-green-dark);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, .35);
+    }
+
+    /* ============================================================
+       9. FOOTER
+       ============================================================ */
+    .site-footer {
+      background: var(--navy-deep);
+      color: #C5D1E8;
+      padding: var(--space-7) 0 var(--space-4);
+      position: relative;
+    }
+
+    .site-footer::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange-vivid), var(--blue-electric));
+    }
+
+    .site-footer__grid {
+      display: grid;
+      gap: 40px;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      margin-bottom: var(--space-6);
+    }
+
+    .site-footer__brand p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: var(--space-3) 0 0;
+      max-width: 320px;
+    }
+
+    .site-footer__col h3 {
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 0 0 var(--space-3);
+      font-weight: 700;
+    }
+
+    .site-footer__col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .site-footer__col a {
+      color: #C5D1E8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color .2s var(--ease);
+    }
+
+    .site-footer__col a:hover {
+      color: var(--orange-warm);
+    }
+
+    .site-footer__bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-3);
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding-top: var(--space-4);
+      font-size: 13px;
+    }
+
+    .site-footer__bottom p {
+      margin: 0;
+    }
+
+    .site-footer__social {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 8px;
+    }
+
+    .site-footer__social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, .06);
+      color: #C5D1E8;
+      transition: background .2s var(--ease), color .2s var(--ease);
+    }
+
+    .site-footer__social a:hover {
+      background: var(--orange-vivid);
+      color: #fff;
+    }
+
+    .site-footer__social svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ============================================================
+       10. WHATSAPP FLOATING BUTTON
+       ============================================================ */
+    .wa-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--wa-green);
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .3s var(--ease), background .3s var(--ease);
+      animation: waPulse 2s infinite;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.1);
+      background-color: var(--wa-green-dark);
+      animation: none;
+    }
+
+    .wa-float svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    @keyframes waPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* ============================================================
+       11. RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1024px) {
+      .site-footer__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .filter-bar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav__toggle {
+        display: block;
+      }
+
+      .nav__list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 16px;
+        gap: 4px;
+        display: none;
+        box-shadow: var(--shadow-md);
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+      }
+
+      .nav__list.is-open {
+        display: flex;
+        animation: dropdownIn .2s var(--ease);
+      }
+
+      .nav__dropdown {
+        position: static;
+        box-shadow: none;
+        border: 0;
+        padding: 4px 0 4px 16px;
+        margin: 0;
+        min-width: 0;
+      }
+
+      .nav__item--cta .btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-header {
+        padding: 56px 0 40px;
+      }
+
+      .filter-bar__inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search-box {
+        width: 100%;
+      }
+
+      .filter-selects {
+        flex-direction: column;
+      }
+
+      .filter-select {
+        width: 100%;
+      }
+
+      .site-footer__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wa-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .wa-float svg {
+        width: 26px;
+        height: 26px;
+      }
+
+      .modal__footer {
+        flex-direction: column-reverse;
+      }
+
+      .modal__footer .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="#" class="wa-float" data-wa="Hi LOCUSERA SOLUTIONS, I have an enquiry." aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+  </a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="/" class="brand" aria-label="LOCUSERA SOLUTIONS home">
+        <img src="./logo.png" alt="LOCUSERA SOLUTIONS Logo" class="brand__logo"
+          onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23fff%22 stroke=%22%230B1B3D%22 stroke-width=%224%22/><circle cx=%2230%22 cy=%2250%22 r=%2２5%２ fill=%２%２3FF7A00%２/><circle cx=%２70%２ cy=%２50%２ r=%２5%２ fill=%２%２31D6FE0%２/><path d=%２M50 30 v25 h15%２ stroke=%２%２31D6FE0%２ stroke-width=%２8%２ fill=%２none%２/><path d=%２M30 50 Q50 10 70 50%２ stroke=%２%２3FF7A00%２ stroke-width=%２3%２ fill=%２none%２/></svg>';" />
+        <span class="brand__name">LOCUSERA SOLUTIONS<span class="brand__sub">A Loyal Excellence</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="primary-menu" data-nav-toggle>
+          <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span><span
+            class="nav__toggle-bar"></span><span class="sr-only">Toggle menu</span>
+        </button>
+        <ul class="nav__list" id="primary-menu" data-nav-list>
+          <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="/about.html" class="nav__link">About</a></li>
+          <li class="nav__item nav__item--has-menu">
+            <button class="nav__link nav__link--button" aria-expanded="false" aria-haspopup="true" data-dropdown-toggle>
+              Services <svg class="nav__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <ul class="nav__dropdown" data-dropdown>
+              <li><a href="it-hiring.html">IT Hiring</a></li>
+              <li><a href="pharma-hiring.html">Pharma Hiring</a></li>
+              <li><a href="digital-marketing.html">Digital Marketing</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="/careers.html" class="nav__link nav__link--active">Careers</a></li>
+          <li class="nav__item"><a href="/employers.html" class="nav__link">For Employers</a></li>
+          <li class="nav__item"><a href="/contact.html" class="nav__link">Contact</a></li>
+          <li class="nav__item nav__item--cta">
+            <button class="btn btn--primary" data-wa="Hi LOCUSERA SOLUTIONS, I am an employer looking to hire talent.">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg> Find Talent
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header__content">
+          <h1 class="page-header__title">Find Your Next Role</h1>
+          <p class="page-header__lede">Explore live opportunities across IT, Pharma, and Digital Marketing. Apply
+            instantly via WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <section class="filter-bar">
+      <div class="container filter-bar__inner">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input type="text" id="search-input" class="search-input" placeholder="Search by job title or keyword..."
+            aria-label="Search jobs">
+        </div>
+        <div class="filter-selects">
+          <select id="filter-dept" class="filter-select" aria-label="Filter by department">
+            <option value="">All Departments</option>
+            <option value="IT">IT</option>
+            <option value="Pharma">Pharma</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+          </select>
+          <select id="filter-loc" class="filter-select" aria-label="Filter by location">
+            <option value="">All Locations</option>
+            <option value="Remote">Remote</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Pune">Pune</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Gurgaon">Gurgaon</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOBS SECTION -->
+    <section class="jobs-section">
+      <div class="container">
+        <div class="jobs-grid" id="jobs-grid">
+          <!-- Jobs will be rendered here by JavaScript -->
+        </div>
+        <div class="pagination" id="pagination">
+          <!-- Pagination will be rendered here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- APPLICATION MODAL -->
+  <div class="modal-overlay" id="apply-modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal__header">
+        <div>
+          <h3 class="modal__title" id="modal-title">Apply for this role</h3>
+          <p class="modal__subtitle" id="modal-job-title">Job Title</p>
+        </div>
+        <button class="modal__close" id="modal-close" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <form id="apply-form" novalidate>
+        <div class="modal__body">
+          <!-- Full Name -->
+          <div class="form-group">
+            <label class="form-label" for="candidate-name">Full Name <span>*</span></label>
+            <input type="text" id="candidate-name" class="form-input" placeholder="e.g. John Doe" required>
+            <div class="form-error" id="error-name">Please enter your full name.</div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="candidate-email">Email Address <span>*</span></label>
+            <input type="email" id="candidate-email" class="form-input" placeholder="e.g. john@example.com" required>
+            <div class="form-error" id="error-email">Please enter a valid email address.</div>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label class="form-label" for="candidate-phone">Phone Number <span>*</span></label>
+            <input type="tel" id="candidate-phone" class="form-input" placeholder="e.g. +91 98765 43210" required>
+            <div class="form-error" id="error-phone">Please enter a valid phone number.</div>
+          </div>
+
+          <!-- Resume Link (Optional) -->
+          <div class="form-group">
+            <label class="form-label" for="candidate-resume">Resume Link (Optional)</label>
+            <input type="url" id="candidate-resume" class="form-input" placeholder="https://drive.google.com/...">
+            <p class="form-hint">Google Drive, Dropbox, or portfolio link. You can also attach your CV directly in the
+              WhatsApp chat.</p>
+            <div class="form-error" id="error-resume">Please provide a valid URL link.</div>
+          </div>
+
+          <!-- Cover Note -->
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label" for="candidate-note">Cover Note (Optional)</label>
+            <textarea id="candidate-note" class="form-textarea"
+              placeholder="Briefly tell us why you are a good fit..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal__footer">
+          <button type="button" class="btn btn--ghost" id="modal-cancel">Cancel</button>
+          <button type="submit" class="btn btn--wa">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+            Submit via WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a href="/" class="brand brand--light">
+          <img src="./logo.png" alt="LOCUSERA SOLUTIONS Logo" class="brand__logo"
+            onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23fff%22 stroke=%22%230B1B3D%22 stroke-width=%224%22/><circle cx=%2230%22 cy=%2２50%２ r=%２5%２ fill=%２%２3FF7A00%２/><circle cx=%２70%２ cy=%２50%２ r=%２5%２ fill=%２%２31D6FE0%２/><path d=%２M50 30 v25 h15%２ stroke=%２%２31D6FE0%２ stroke-width=%２8%２ fill=%２none%２/><path d=%２M30 50 Q50 10 70 50%２ stroke=%２%２3FF7A00%２ stroke-width=%２3%２ fill=%２none%２/></svg>';" />
+          <span class="brand__name">LOCUSERA SOLUTIONS<span class="brand__sub">A Loyal Excellence</span></span>
+        </a>
+        <p>LOCUSERA SOLUTIONS PRIVATE LIMITED - specialist recruitment for IT, pharmaceutical, and digital marketing
+          teams.</p>
+      </div>
+      <nav class="site-footer__col" aria-label="Services">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services/it-hiring.html">IT Hiring</a></li>
+          <li><a href="/services/pharma-hiring.html">Pharma Hiring</a></li>
+          <li><a href="/services/digital-marketing.html">Digital Marketing</a></li>
+        </ul>
+      </nav>
+      <nav class="site-footer__col" aria-label="Company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/employers.html">For Employers</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="site-footer__col" aria-label="Legal">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container site-footer__bottom">
+      <p>© <span data-year>2025</span> LOCUSERA SOLUTIONS PRIVATE LIMITED. All rights reserved.</p>
+      <ul class="site-footer__social" aria-label="Social links">
+        <li><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg></a></li>
+        <li><a href="#" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+            </svg></a></li>
+        <li><a href="mailto:hello@locusera.example" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Configuration
+      const WA_NUMBER = "919553774933"; // <-- REPLACE WITH YOUR ACTUAL WHATSAPP NUMBER
+      const JOBS_PER_PAGE = 6;
+      let currentPage = 1;
+
+      // Demo Jobs Data
+      const ALL_JOBS = [
+        { title: 'Senior Backend Engineer', department: 'IT', location: 'Remote', type: 'Full-time' },
+        { title: 'QA Microbiologist', department: 'Pharma', location: 'Hyderabad', type: 'Full-time' },
+        { title: 'Growth Marketing Lead', department: 'Digital Marketing', location: 'Bangalore', type: 'Hybrid' },
+        { title: 'DevOps Engineer', department: 'IT', location: 'Pune', type: 'Full-time' },
+        { title: 'Regulatory Affairs Associate', department: 'Pharma', location: 'Ahmedabad', type: 'Full-time' },
+        { title: 'Performance Marketing Manager', department: 'Digital Marketing', location: 'Mumbai', type: 'Full-time' },
+        { title: 'Lead Frontend Developer', department: 'IT', location: 'Chennai', type: 'Remote' },
+        { title: 'Clinical Data Manager', department: 'Pharma', location: 'Delhi', type: 'Full-time' },
+        { title: 'SEO Specialist', department: 'Digital Marketing', location: 'Remote', type: 'Full-time' },
+        { title: 'Cloud Architect', department: 'IT', location: 'Bangalore', type: 'Hybrid' },
+        { title: 'Pharmacovigilance Officer', department: 'Pharma', location: 'Pune', type: 'Full-time' },
+        { title: 'Email Marketing Manager', department: 'Digital Marketing', location: 'Gurgaon', type: 'Full-time' }
+      ];
+
+      // State
+      let filteredJobs = [...ALL_JOBS];
+      let activeJob = null;
+
+      // DOM Elements
+      const grid = document.getElementById('jobs-grid');
+      const pagination = document.getElementById('pagination');
+      const searchInput = document.getElementById('search-input');
+      const filterDept = document.getElementById('filter-dept');
+      const filterLoc = document.getElementById('filter-loc');
+
+      // Modal Elements
+      const modal = document.getElementById('apply-modal');
+      const modalJobTitle = document.getElementById('modal-job-title');
+      const modalClose = document.getElementById('modal-close');
+      const modalCancel = document.getElementById('modal-cancel');
+      const applyForm = document.getElementById('apply-form');
+
+      // Helper: WhatsApp URL
+      function getWaUrl(message) {
+        return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+      }
+
+      // 1. Render Jobs
+      function renderJobs() {
+        const startIndex = (currentPage - 1) * JOBS_PER_PAGE;
+        const pageJobs = filteredJobs.slice(startIndex, startIndex + JOBS_PER_PAGE);
+
+        if (pageJobs.length === 0) {
+          grid.innerHTML = `
+            <div class="no-results">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+              <h3>No jobs found</h3>
+              <p>Try adjusting your search or filter criteria.</p>
+            </div>
+          `;
+          pagination.innerHTML = '';
+          return;
+        }
+
+        grid.innerHTML = pageJobs.map((job, index) => {
+          const jobId = startIndex + index;
+          return `
+            <article class="job-card">
+              <span class="job-card__type">${job.department}</span>
+              <h3>${job.title}</h3>
+              <p class="job-card__meta">${job.location} · ${job.type}</p>
+              <button class="btn btn--ghost" onclick="openApplyModal(${jobId})">Apply Now</button>
+            </article>
+          `;
+        }).join('');
+
+        renderPagination();
+      }
+
+      // 2. Render Pagination
+      function renderPagination() {
+        const totalPages = Math.ceil(filteredJobs.length / JOBS_PER_PAGE);
+        if (totalPages <= 1) { pagination.innerHTML = ''; return; }
+
+        let html = '';
+        html += `<button class="page-item ${currentPage === 1 ? 'disabled' : ''}" data-page="${currentPage - 1}">&laquo;</button>`;
+        for (let i = 1; i <= totalPages; i++) {
+          html += `<button class="page-item ${currentPage === i ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        }
+        html += `<button class="page-item ${currentPage === totalPages ? 'disabled' : ''}" data-page="${currentPage + 1}">&raquo;</button>`;
+
+        pagination.innerHTML = html;
+
+        pagination.querySelectorAll('.page-item').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const page = parseInt(e.target.getAttribute('data-page'));
+            if (page >= 1 && page <= totalPages) {
+              currentPage = page;
+              renderJobs();
+              window.scrollTo({ top: document.querySelector('.jobs-section').offsetTop - 100, behavior: 'smooth' });
+            }
+          });
+        });
+      }
+
+      // 3. Filter Logic
+      function applyFilters() {
+        const q = searchInput.value.toLowerCase().trim();
+        const dept = filterDept.value;
+        const loc = filterLoc.value;
+
+        filteredJobs = ALL_JOBS.filter(job => {
+          const matchesSearch = job.title.toLowerCase().includes(q) || job.department.toLowerCase().includes(q);
+          const matchesDept = dept === '' || job.department === dept;
+          const matchesLoc = loc === '' || job.location === loc;
+          return matchesSearch && matchesDept && matchesLoc;
+        });
+
+        currentPage = 1;
+        renderJobs();
+      }
+
+      // Event Listeners for Filters
+      searchInput.addEventListener('input', applyFilters);
+      filterDept.addEventListener('change', applyFilters);
+      filterLoc.addEventListener('change', applyFilters);
+
+      // 4. Modal Logic
+      window.openApplyModal = function (jobIndex) {
+        const startIndex = (currentPage - 1) * JOBS_PER_PAGE;
+        activeJob = filteredJobs[startIndex + jobIndex];
+
+        if (!activeJob) return;
+
+        modalJobTitle.textContent = `${activeJob.title} (${activeJob.location})`;
+        applyForm.reset();
+
+        // Clear errors
+        document.querySelectorAll('.form-error').forEach(el => el.classList.remove('is-visible'));
+        document.querySelectorAll('.form-input, .form-textarea').forEach(el => el.classList.remove('is-invalid'));
+
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      function closeModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      modalClose.addEventListener('click', closeModal);
+      modalCancel.addEventListener('click', closeModal);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+      });
+
+      // 5. Form Validation & Submission
+      applyForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('candidate-name');
+        const email = document.getElementById('candidate-email');
+        const phone = document.getElementById('candidate-phone');
+        const resume = document.getElementById('candidate-resume');
+        const note = document.getElementById('candidate-note');
+
+        let isValid = true;
+
+        // Reset errors
+        [name, email, phone, resume].forEach(el => el.classList.remove('is-invalid'));
+        ['error-name', 'error-email', 'error-phone', 'error-resume'].forEach(id => document.getElementById(id).classList.remove('is-visible'));
+
+        // Validate Name
+        if (name.value.trim().length < 2) {
+          name.classList.add('is-invalid');
+          document.getElementById('error-name').classList.add('is-visible');
+          isValid = false;
+        }
+
+        // Validate Email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value.trim())) {
+          email.classList.add('is-invalid');
+          document.getElementById('error-email').classList.add('is-visible');
+          isValid = false;
+        }
+
+        // Validate Phone
+        if (phone.value.trim().length < 6) {
+          phone.classList.add('is-invalid');
+          document.getElementById('error-phone').classList.add('is-visible');
+          isValid = false;
+        }
+
+        // Validate Resume Link ONLY if the user typed something
+        const resumeValue = resume.value.trim();
+        if (resumeValue !== '') {
+          try {
+            new URL(resumeValue);
+          } catch (_) {
+            resume.classList.add('is-invalid');
+            document.getElementById('error-resume').classList.add('is-visible');
+            isValid = false;
+          }
+        }
+
+        if (!isValid) return;
+
+        // Construct WhatsApp Message
+        const message = `
+*New Job Application*
+
+*Role:* ${activeJob.title}
+*Location:* ${activeJob.location}
+*Department:* ${activeJob.department}
+
+*Name:* ${name.value.trim()}
+*Email:* ${email.value.trim()}
+*Phone:* ${phone.value.trim()}
+${resumeValue ? `\n*Resume Link:* ${resumeValue}` : ''}
+${note.value.trim() ? `\n*Cover Note:*\n${note.value.trim()}` : ''}
+        `.trim();
+
+        // Open WhatsApp
+        window.open(getWaUrl(message), "_blank");
+
+        // Close modal after submission
+        closeModal();
+      });
+
+      // Global WhatsApp Button
+      document.querySelectorAll("[data-wa]").forEach(el => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          const message = el.getAttribute("data-wa") || "Hi LOCUSERA SOLUTIONS, I would like to make an enquiry.";
+          window.open(getWaUrl(message), "_blank");
+        });
+      });
+
+      // Navigation Toggle
+      const navToggle = document.querySelector('[data-nav-toggle]');
+      const navList = document.querySelector('[data-nav-list]');
+      navToggle?.addEventListener('click', () => {
+        const open = navList.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      document.querySelectorAll('[data-dropdown-toggle]').forEach(btn => {
+        const menu = btn.parentElement.querySelector('[data-dropdown]');
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const open = menu.classList.toggle('is-open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        document.querySelectorAll('[data-dropdown].is-open').forEach(menu => {
+          if (!menu.parentElement.contains(e.target)) {
+            menu.classList.remove('is-open');
+            menu.parentElement.querySelector('[data-dropdown-toggle]')?.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // Init
+      document.addEventListener('DOMContentLoaded', () => {
+        renderJobs();
+        document.querySelectorAll('[data-year]').forEach(el => {
+          el.textContent = new Date().getFullYear();
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>
